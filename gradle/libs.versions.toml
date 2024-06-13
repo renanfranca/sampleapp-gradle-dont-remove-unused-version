@@ -12,6 +12,7 @@ bundles = {}
 	commons-lang3 = "3.14.0"
 	mockito = "5.12.0"
 	junit-jupiter = "5.10.2"
+	liquibase = "4.28.0"
 
 	[plugins.sonarqube]
 		id = "org.sonarqube"
@@ -30,6 +31,13 @@ bundles = {}
 
 		[plugins.spring-boot.version]
 			ref = "spring-boot"
+
+	[libraries.liquibase-core]
+		name = "liquibase-core"
+		group = "org.liquibase"
+
+		[libraries.liquibase-core.version]
+			ref = "liquibase"
 
 	[libraries.spring-boot-starter-test]
 		name = "spring-boot-starter-test"
