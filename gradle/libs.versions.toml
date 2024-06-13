@@ -1,18 +1,19 @@
 bundles = {}
 
 [versions]
-	archunit-junit5 = "1.3.0"
 	testcontainers = "1.19.8"
 	reflections = "0.10.2"
 	sonarqube = "4.4.1.3373"
-	git-properties = "2.4.2"
 	jacoco = "0.8.11"
+	mockito = "5.12.0"
+	liquibase = "4.28.0"
+	archunit-junit5 = "1.3.0"
+	git-properties = "2.4.2"
+	springdoc-openapi-starter-webmvc = "2.5.0"
 	assertj = "3.26.0"
 	spring-boot = "3.3.0"
 	commons-lang3 = "3.14.0"
-	mockito = "5.12.0"
 	junit-jupiter = "5.10.2"
-	liquibase = "4.28.0"
 
 	[plugins.sonarqube]
 		id = "org.sonarqube"
@@ -91,9 +92,23 @@ bundles = {}
 		name = "spring-boot-starter-actuator"
 		group = "org.springframework.boot"
 
+	[libraries.springdoc-openapi-starter-webmvc-api]
+		name = "springdoc-openapi-starter-webmvc-api"
+		group = "org.springdoc"
+
+		[libraries.springdoc-openapi-starter-webmvc-api.version]
+			ref = "springdoc-openapi-starter-webmvc"
+
 	[libraries.hikariCP]
 		name = "HikariCP"
 		group = "com.zaxxer"
+
+	[libraries.springdoc-openapi-starter-webmvc-ui]
+		name = "springdoc-openapi-starter-webmvc-ui"
+		group = "org.springdoc"
+
+		[libraries.springdoc-openapi-starter-webmvc-ui.version]
+			ref = "springdoc-openapi-starter-webmvc"
 
 	[libraries.spring-boot-starter]
 		name = "spring-boot-starter"
